@@ -10,8 +10,8 @@ test.describe("Admin Login Tests", () => {
   });
 
   test("should login successfully with valid admin credentials", async () => {
-    const username = process.env.ADMIN_USERNAME || "admin";
-    const password = process.env.ADMIN_PASSWORD || "password";
+    const username = process.env.ADMIN_USERNAME;
+    const password = process.env.ADMIN_PASSWORD ;
 
     await adminLoginPage.login(username, password);
 
@@ -19,7 +19,7 @@ test.describe("Admin Login Tests", () => {
   });
 
   test("should display error message with wrong password", async () => {
-    const username = process.env.ADMIN_USERNAME || "admin";
+    const username = process.env.ADMIN_USERNAME ;
 
     await adminLoginPage.login(username, "wrongpassword123");
 

@@ -10,8 +10,8 @@ export class AdminLoginPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.usernameInput = page.getByTestId("username");
-    this.passwordInput = page.getByTestId("password");
+    this.usernameInput = page.locator("#username");
+    this.passwordInput = page.locator("#password");
     this.loginButton = page.getByRole("button", { name: "Login" });
     this.logoutButton = page.getByRole("button", { name: "Logout" });
     this.errorMessage = page
@@ -20,7 +20,7 @@ export class AdminLoginPage {
   }
 
   async goto() {
-    await this.page.goto('/#/admin');
+    await this.page.goto('/admin');
   }
 
   async login(username?: string, password?: string) {
