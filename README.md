@@ -4,3 +4,5 @@
 2. Install dependencies:
    ```bash
    npm install
+
+![Playwright Tests](https://github.com/<USERNAME>/<REPO>/actions/workflows/playwright.yml/badge.svg)
